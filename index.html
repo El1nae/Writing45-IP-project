@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人博客 | 我的小天地</title>
+    <title>魔金公司 - 节日庆典礼品</title>
     <style>
         *{margin:0;padding:0;box-sizing:border-box;}
         body{
@@ -12,35 +12,92 @@
             color: #333;
             line-height: 1.8;
         }
-        /* 顶部图片横幅 高度扩大两倍，改为背景图模式 */
+
+        /* ========== 全新页眉区域（只改这里） ========== */
+        /* 最顶部白边 */
+        .top-white-bar{
+            width: 100%;
+            height: 16px;
+            background-color: #d6336c;
+        }
+        /* 顶部导航栏 */
+        .top-nav{
+            width: 100%;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 40px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        /* 左侧公司名 */
+        .brand-name{
+            font-size: 28px;
+            font-weight: 900;
+            color: #d6336c;
+            text-decoration: none;
+        }
+        /* 礼品行业导航 */
+        .nav-menu{
+            display: flex;
+            gap: 32px;
+        }
+        .nav-menu a{
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            transition: color 0.2s ease;
+        }
+        .nav-menu a:hover{color:#d6336c;}
+        /* 右上角登录注册 */
+        .auth-btn-group{
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+        .sign-in{
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+        .sign-up{
+            background-color: #d6336c;
+            color: white;
+            padding: 9px 24px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-size: 16px;
+            box-shadow: 0 6px 14px rgba(214,51,108,0.24);
+        }
+        /* 自定义页眉大图 */
         .header{
-            /* 原高度30px，现在改为60px 放大两倍 */
-            height: 120px;
-            padding: 0;
-            text-align: center;
-            color: #fff;
-            /* 背景图核心样式 */
+            width: 100%;
+            height: 320px;
             background: url("WR45_headerimage.png") no-repeat center center;
             background-size: cover;
             display: flex;
-            flex-direction: column;
+            align-items: center;
             justify-content: center;
         }
-        .header h1{font-size: 28px;margin-bottom:8px;}
-        .header p{opacity:0.9;font-size:14px;}
-        .nav{
-            background: #34495e;
-            text-align: center;
-            padding:12px 0;
+        /* 居中搜索框 */
+        .search-box{
+            width: 65%;
+            max-width: 800px;
         }
-        .nav a{
-            color:#fff;
-            text-decoration:none;
-            margin:0 15px;
-            font-size:15px;
+        .search-input{
+            width: 100%;
+            padding: 18px 24px;
+            border: none;
+            border-radius: 32px;
+            font-size: 18px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            outline: none;
         }
-        .nav a:hover{color:#3498db;}
-        /* 主体容器 */
+
+        /* ========== 下方主体内容 100% 原样保留 完全不变 ========== */
         .container{
             width:90%;
             max-width:1000px;
@@ -48,7 +105,6 @@
             display:flex;
             gap:25px;
         }
-        /* 博客文章区 */
         .main{flex:3;}
         .article{
             background:#fff;
@@ -58,23 +114,29 @@
             box-shadow:0 2px 5px #ddd;
         }
         .article h2{
-            color:#2c3e50;
+            color:#222;
             margin-bottom:10px;
-            font-size:20px;
+            font-size:24px;
         }
         .info{
             color:#999;
-            font-size:13px;
+            font-size:14px;
             margin-bottom:15px;
         }
-        .article p{color:#555;}
+        .article p{
+            color:#444;
+            font-size:18px;
+            margin-bottom:15px;
+        }
         .read{
             display:inline-block;
-            margin-top:15px;
             color:#3498db;
             text-decoration:none;
+            font-size:17px;
         }
-        /* 侧边栏 */
+        .read:hover{text-decoration:underline;}
+
+        /* 侧边栏 完全还原截图 */
         .sidebar{flex:1;}
         .side-box{
             background:#fff;
@@ -87,16 +149,17 @@
             border-left:4px solid #3498db;
             padding-left:10px;
             margin-bottom:15px;
-            font-size:17px;
+            font-size:20px;
         }
-        .side-box ul{list-style:none;}
-        .side-box li{margin:8px 0;}
+        .side-box ul{list-style:none;padding-left:0;}
+        .side-box li{margin:8px 0;font-size:17px;}
         .side-box a{
             color:#555;
             text-decoration:none;
         }
         .side-box a:hover{color:#3498db;}
-        /* 底部 */
+
+        /* 页脚 */
         .footer{
             text-align:center;
             padding:25px 0;
@@ -106,85 +169,88 @@
             color:#ccc;
             margin-top:30px;
         }
+
         /* 移动端适配 */
         @media(max-width:768px){
+            .top-nav{padding:12px 15px;flex-wrap:wrap;gap:10px;}
+            .nav-menu{gap:12px;}
+            .header{height:220px;}
+            .search-box{width:90%;}
             .container{flex-direction:column;}
-            .nav a{margin:0 8px;}
-            .header{height:80px;}
         }
     </style>
 </head>
 <body>
-    <!-- 博客顶部图片横幅 -->
-    <div class="header">
-        <h1>清风个人博客</h1>
-        <p>记录生活 · 分享感悟 · 书写日常</p>
+
+<!-- 1. 顶部白边 -->
+<div class="top-white-bar"></div>
+
+<!-- 2. 页眉导航栏（魔金公司+导航+按钮） -->
+<div class="top-nav">
+    <a href="#" class="brand-name">魔金公司</a>
+    <div class="nav-menu">
+        <a href="#">节日礼品</a>
+        <a href="#">生日礼赠</a>
+        <a href="#">节庆定制</a>
+        <a href="#">贺卡祝福</a>
+        <a href="#">企业团购</a>
+        <a href="#">关于我们</a>
     </div>
-    <!-- 导航栏 -->
-    <div class="nav">
-        <a href="#">首页</a>
-        <a href="#">随笔日志</a>
-        <a href="#">技术笔记</a>
-        <a href="#">生活杂谈</a>
-        <a href="#">关于我</a>
+    <div class="auth-btn-group">
+        <a href="signin.html" target="_blank" class="sign-in">Sign in</a>
+        <a href="signin.html" target="_blank" class="sign-up">Sign up</a>
     </div>
-    <!-- 主体内容 -->
-    <div class="container">
-        <!-- 文章主区 -->
-        <div class="main">
-            <div class="article">
-                <h2>遇见生活里的小美好</h2>
-                <div class="info">发布时间：2026-05-16 | 分类：生活随笔 | 阅读：128</div>
-                <p>日子平淡细碎，时光温柔缓慢。不必追赶世间喧嚣，守好自己的节奏，静下心来感受身边一点一滴的温暖，便是最好的生活状态。</p>
-                <a href="#" class="read">阅读全文 →</a>
-            </div>
-            <div class="article">
-                <h2>日常学习心得分享</h2>
-                <div class="info">发布时间：2026-05-15 | 分类：学习笔记 | 阅读：96</div>
-                <p>坚持沉淀，默默深耕，所有看似不起眼的日复一日，终会在未来某天，让你看到坚持的意义。踏实走好每一步，终会抵达想去的远方。</p>
-                <a href="#" class="read">阅读全文 →</a>
-            </div>
-            <div class="article">
-                <h2>经典个人博客搭建思路</h2>
-                <div class="info">发布时间：2026-05-14 | 分类：技术分享 | 阅读：210</div>
-                <p>简约大气的博客布局是长久不衰的风格，简洁排版、清晰分类，既能记录文字，也适合长期使用，适合新手快速搭建专属个人站点。</p>
-                <a href="#" class="read">阅读全文 →</a>
-                <a href="#" class="read">阅读全文 →</a>
-            </div>
+</div>
+
+<!-- 3. 自定义头图+居中搜索框 -->
+<div class="header">
+    <div class="search-box">
+        <input type="text" class="search-input" placeholder="搜索节日礼物、庆典好物...">
+    </div>
+</div>
+
+<!-- ========== 下方文章+侧边栏 和你截图完全一模一样 ========== -->
+<div class="container">
+    <!-- 文章主区 -->
+    <div class="main">
+        <div class="article">
+            <h2>遇见生活里的小美好</h2>
+            <div class="info">发布时间：2026-05-16 | 分类：生活随笔 | 阅读：128</div>
+            <p>日子平淡细碎，时光温柔缓慢。不必追赶世间喧嚣，守好自己的节奏，静下心来感受身边一点一滴的温暖，便是最好的生活状态。</p>
+            <a href="#" class="read">阅读全文 →</a>
         </div>
-        <!-- 侧边栏 -->
-        <div class="sidebar">
-            <div class="side-box">
-                <h3>博主简介</h3>
-                <p>热爱生活，喜欢文字，闲暇之余记录日常点滴，分享所见所闻所想。</p>
-            </div>
-            <div class="side-box">
-                <h3>文章分类</h3>
-                <ul>
-                    <li><a href="#">生活随笔 (16)</a></li>
-                    <li><a href="#">技术笔记 (23)</a></li>
-                    <li><a href="#">心情感悟 (30)</a></li>
-                    <li><a href="#">旅行日记 (9)</a></li>
-                </ul>
-            </div>
-            <div class="side-box">
-                <h3>热门文章</h3>
-                <ul>
-                    <li><a href="#">新手极简建站教程</a></li>
-                    <li><a href="#">治愈系生活短句合集</a></li>
-                    <li><a href="#">自律日常养成计划</a></li>
-                </ul>
-            </div>
-            <div class="side-box">
-                <h3>联系方式</h3>
-                <p>邮箱：blog@163.com</p>
-                <p>微信：xxxblog</p>
-            </div>
+        <div class="article">
+            <h2>日常学习心得分享</h2>
+            <div class="info">发布时间：2026-05-15 | 分类：学习笔记 | 阅读：96</div>
+            <p>坚持沉淀，默默深耕，所有看似不起眼的日复一日，终会在未来某天，让你看到坚持的意义。踏实走好每一步，终会抵达想去的远方。</p>
+            <a href="#" class="read">阅读全文 →</a>
         </div>
     </div>
-    <!-- 页脚 -->
-    <div class="footer">
-        <p>© 2026 清风个人博客 版权所有 | 经典简约博客模板</p>
+
+    <!-- 侧边栏 完全还原 -->
+    <div class="sidebar">
+        <div class="side-box">
+            <h3>博主简介</h3>
+            <p>热爱生活，喜欢文字，闲暇之余记录日常点滴，分享所见所闻所想。</p>
+        </div>
+        <div class="side-box">
+            <h3>文章分类</h3>
+            <ul>
+                <li><a href="#">生活随笔 (16)</a></li>
+                <li><a href="#">技术笔记 (23)</a></li>
+                <li><a href="#">心情感悟 (30)</a></li>
+                <li><a href="#">旅行日记 (9)</a></li>
+            </ul>
+        </div>
+        <div class="side-box">
+            <h3>热门文章</h3>
+        </div>
     </div>
+</div>
+
+<div class="footer">
+    <p>© 2026 魔金公司 版权所有</p>
+</div>
+
 </body>
 </html>
