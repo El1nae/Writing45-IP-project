@@ -141,17 +141,19 @@
             margin-top: 20px;
         }
 
-        /* ========== 下方主体内容 100% 原样保留 完全不变 ========== */
+        /* ========== 下方主体内容 ========== */
         .container {
-            width: 90%;
-            max-width: 1000px;
+            width: 92%;
+            max-width: 1280px;
             margin: 30px auto;
             display: flex;
             gap: 25px;
+            align-items: flex-start;
         }
 
         .main {
             flex: 3;
+            min-width: 0;
         }
 
         .article {
@@ -195,7 +197,7 @@
         }
 
         /* ===== DION AI Chat Widget ===== */
-        .sidebar{flex:1;min-width:0;}
+        .sidebar{flex:0 0 340px;min-width:300px;}
         .dion-chat{
             background:#fff;
             border-radius:16px;
@@ -203,7 +205,9 @@
             overflow:hidden;
             display:flex;
             flex-direction:column;
-            height:600px;
+            height:calc(100vh - 120px);
+            min-height:480px;
+            max-height:800px;
             position:sticky;
             top:80px;
         }
@@ -289,6 +293,21 @@
             margin-top: 30px;
         }
 
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                flex: none;
+                width: 100%;
+                min-width: unset;
+            }
+            .dion-chat {
+                height: 480px;
+                position: static;
+            }
+        }
+
         @media (max-width: 768px) {
             .top-nav {
                 padding: 12px 15px;
@@ -307,10 +326,6 @@
 
             .search-box {
                 width: 90%;
-            }
-
-            .container {
-                flex-direction: column;
             }
         }
     </style>
