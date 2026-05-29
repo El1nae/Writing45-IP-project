@@ -5,60 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>everyholiday</title>
     <style>
-        *{margin:0;padding:0;box-sizing:border-box;}
-        body{
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             background-color: #f5f5f5;
-            font-family: "Microsoft Yahei",SimSun,sans-serif;
+            font-family: "Microsoft Yahei", SimSun, sans-serif;
             color: #333;
             line-height: 1.8;
         }
 
         /* ========== 全新页眉区域（只改这里） ========== */
-        /* 最顶部白边 */
-        .top-white-bar{
+        .top-white-bar {
             width: 100%;
             height: 16px;
             background-color: #d6336c;
         }
-        /* 顶部导航栏 */
-        .top-nav{
+
+        .top-nav {
             width: 100%;
             background-color: #ffffff;
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 14px 40px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
             position: sticky;
             top: 0;
             z-index: 100;
         }
-        /* 左侧公司名 */
-        .brand-name{
+
+        .brand-name {
             font-size: 28px;
             font-weight: 900;
             color: #d6336c;
             text-decoration: none;
         }
-        /* 礼品行业导航 */
-        .nav-menu{
+
+        .nav-menu {
             display: flex;
             gap: 32px;
         }
-        .nav-menu a{
+
+        .nav-menu a {
             text-decoration: none;
             color: #333;
             font-size: 16px;
             transition: color 0.2s ease;
         }
-        .nav-menu a:hover{color:#d6336c;}
-        /* 右上角登录注册 */
-        .auth-btn-group{
+
+        .nav-menu a:hover {
+            color: #d6336c;
+        }
+
+        .auth-btn-group {
             display: flex;
             gap: 16px;
             align-items: center;
         }
-        .sign-in{
+
+        .sign-in {
             background-color: #d6336c;
             color: #ffffff;
             font-weight: 700;
@@ -66,15 +75,16 @@
             border-radius: 24px;
             text-decoration: none;
             font-size: 16px;
-            box-shadow: 0 6px 14px rgba(214,51,108,0.24);
+            box-shadow: 0 6px 14px rgba(214, 51, 108, 0.24);
         }
-        .sign-up{
+
+        .sign-up {
             text-decoration: none;
             color: #333;
             font-size: 16px;
         }
-        /* 自定义页眉大图 */
-        .header{
+
+        .header {
             width: 100%;
             min-height: 100vh;
             height: 100vh;
@@ -85,12 +95,13 @@
             justify-content: center;
             padding-bottom: 40px;
         }
-        /* 居中搜索框 */
-        .search-box{
+
+        .search-box {
             width: 65%;
             max-width: 800px;
         }
-        .search-input{
+
+        .search-input {
             width: 100%;
             padding: 18px 24px;
             border: none;
@@ -99,80 +110,92 @@
             box-shadow: 0 4px 15px rgba(236, 186, 211, 0.15);
             outline: none;
         }
-        .drop-cap{
+
+        .drop-cap {
             font-size: 1.05em;
             line-height: 1.9;
             text-indent: 2em;
         }
-        .hashtags{
+
+        .hashtags {
             color: #d6336c;
             font-weight: 700;
         }
-        .divider{
+
+        .divider {
             text-align: center;
             margin: 24px 0;
             color: #d6336c;
         }
-        .closing-quote{
+
+        .closing-quote {
             font-size: 20px;
             font-weight: 700;
             color: #d6336c;
             margin: 24px 0;
         }
-        .footnote{
+
+        .footnote {
             color: #999;
             font-size: 14px;
             margin-top: 20px;
         }
 
         /* ========== 下方主体内容 100% 原样保留 完全不变 ========== */
-        .container{
-            width:90%;
-            max-width:1000px;
-            margin:30px auto;
-            display:flex;
-            gap:25px;
-        }
-        .main{flex:3;}
-        .article{
-            background:#fff;
-            padding:25px;
-            margin-bottom:20px;
-            border-radius:4px;
-            box-shadow:0 2px 5px rgba(0,0,0,0.08);
-        }
-        .article h2{
-            color:#222;
-            margin-bottom:10px;
-            font-size:24px;
-        }
-        .article .subtitle{
-            color:#666;
-            font-size:18px;
-            margin-bottom:18px;
-            line-height:1.5;
-        }
-        .info{
-            color:#999;
-            font-size:14px;
-            margin-bottom:15px;
-        }
-        .article p{
-            color:#444;
-            font-size:18px;
-            margin-bottom:15px;
-        }
-        .read{
-            display:inline-block;
-            color:#d6336c;
-            text-decoration:none;
-            font-size:17px;
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 30px auto;
+            display: flex;
+            gap: 25px;
         }
 
-        /* 侧边栏 */
-        .sidebar{flex:1;min-width:0;}
+        .main {
+            flex: 3;
+        }
+
+        .article {
+            background: #fff;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+        }
+
+        .article h2 {
+            color: #222;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .article .subtitle {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 18px;
+            line-height: 1.5;
+        }
+
+        .info {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .article p {
+            color: #444;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .read {
+            display: inline-block;
+            color: #d6336c;
+            text-decoration: none;
+            font-size: 17px;
+        }
 
         /* ===== DION AI Chat Widget ===== */
+        .sidebar{flex:1;min-width:0;}
         .dion-chat{
             background:#fff;
             border-radius:16px;
@@ -197,61 +220,34 @@
             border-radius:50%;
             background:rgba(255,255,255,0.25);
             display:flex;align-items:center;justify-content:center;
-            font-size:20px;
-            flex-shrink:0;
+            font-size:20px;flex-shrink:0;
         }
         .dion-header-info{flex:1;}
-        .dion-name{
-            color:#fff;font-weight:700;font-size:16px;line-height:1.2;
-        }
-        .dion-status{
-            color:rgba(255,255,255,0.8);font-size:12px;
-            display:flex;align-items:center;gap:5px;
-        }
-        .status-dot{
-            width:7px;height:7px;border-radius:50%;
-            background:#4ade80;display:inline-block;
-            animation:pulse 2s infinite;
-        }
+        .dion-name{color:#fff;font-weight:700;font-size:16px;line-height:1.2;}
+        .dion-status{color:rgba(255,255,255,0.8);font-size:12px;display:flex;align-items:center;gap:5px;}
+        .status-dot{width:7px;height:7px;border-radius:50%;background:#4ade80;display:inline-block;animation:pulse 2s infinite;}
         @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.5;}}
-
-        /* 消息区 */
         .dion-messages{
             flex:1;overflow-y:auto;padding:16px;
-            display:flex;flex-direction:column;gap:12px;
-            scroll-behavior:smooth;
+            display:flex;flex-direction:column;gap:12px;scroll-behavior:smooth;
         }
         .dion-messages::-webkit-scrollbar{width:4px;}
         .dion-messages::-webkit-scrollbar-thumb{background:#f0c0d0;border-radius:4px;}
-
         .msg{display:flex;gap:8px;align-items:flex-end;}
         .msg.user{flex-direction:row-reverse;}
-
         .msg-avatar{
             width:28px;height:28px;border-radius:50%;
             background:#f3a8c0;display:flex;align-items:center;
             justify-content:center;font-size:13px;flex-shrink:0;
         }
         .msg.user .msg-avatar{background:#d6336c;color:#fff;}
-
         .msg-bubble{
             max-width:82%;padding:10px 14px;
             border-radius:18px;font-size:14px;line-height:1.6;
             color:#333;word-break:break-word;
         }
-        .msg.ai .msg-bubble{
-            background:#f7f7f8;border-bottom-left-radius:4px;
-        }
-        .msg.user .msg-bubble{
-            background:#d6336c;color:#fff;border-bottom-right-radius:4px;
-        }
-        .msg-time{
-            font-size:11px;color:#bbb;margin-top:3px;
-            text-align:right;
-        }
-        .msg.ai .msg-time{text-align:left;}
-
-        /* 快捷提问 */
+        .msg.user .msg-bubble{background:#d6336c;color:#fff;border-bottom-right-radius:4px;}
+        .msg-time{font-size:11px;color:#bbb;margin-top:3px;text-align:right;}
         .dion-suggestions{
             padding:8px 16px;display:flex;flex-wrap:wrap;gap:6px;flex-shrink:0;
             border-top:1px solid #f5e8ed;
@@ -259,24 +255,18 @@
         .suggestion-chip{
             background:#fff0f5;border:1px solid #f3a8c0;
             color:#d6336c;font-size:12px;padding:5px 11px;
-            border-radius:20px;cursor:pointer;transition:all 0.2s;
-            white-space:nowrap;
+            border-radius:20px;cursor:pointer;transition:all 0.2s;white-space:nowrap;
         }
         .suggestion-chip:hover{background:#d6336c;color:#fff;border-color:#d6336c;}
-
-        /* 输入区 */
         .dion-input-area{
-            padding:12px 14px;
-            border-top:1px solid #f5e8ed;
-            display:flex;gap:8px;align-items:flex-end;
-            flex-shrink:0;background:#fff;
+            padding:12px 14px;border-top:1px solid #f5e8ed;
+            display:flex;gap:8px;align-items:flex-end;flex-shrink:0;background:#fff;
         }
         .dion-input{
             flex:1;border:1.5px solid #f0c0d0;border-radius:22px;
             padding:10px 16px;font-size:14px;resize:none;
             outline:none;font-family:inherit;line-height:1.5;
-            max-height:90px;overflow-y:auto;color:#333;
-            transition:border-color 0.2s;
+            max-height:90px;overflow-y:auto;color:#333;transition:border-color 0.2s;
         }
         .dion-input:focus{border-color:#d6336c;}
         .dion-input::placeholder{color:#ccc;}
@@ -290,236 +280,231 @@
         .dion-send:active{transform:scale(0.92);}
         .dion-send svg{width:18px;height:18px;fill:#fff;}
 
-        /* 页脚 */
-        .footer{
-            text-align:center;
-            padding:25px 0;
-            font-size:14px;
-            background:#d6336c;
-            color:#ccc;
-            margin-top:30px;
+        .footer {
+            text-align: center;
+            padding: 25px 0;
+            font-size: 14px;
+            background: #d6336c;
+            color: #ccc;
+            margin-top: 30px;
         }
 
-        /* 移动端适配 */
-        @media(max-width:768px){
-            .top-nav{padding:12px 15px;flex-wrap:wrap;gap:10px;}
-            .nav-menu{gap:12px;}
-            .header{height:60vh;min-height:auto;}
-            .search-box{width:90%;}
-            .container{flex-direction:column;}
+        @media (max-width: 768px) {
+            .top-nav {
+                padding: 12px 15px;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .nav-menu {
+                gap: 12px;
+            }
+
+            .header {
+                height: 60vh;
+                min-height: auto;
+            }
+
+            .search-box {
+                width: 90%;
+            }
+
+            .container {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="top-white-bar"></div>
 
-<!-- 1. 顶部白边 -->
-<div class="top-white-bar"></div>
-
-<!-- 2. 页眉导航栏（公司+导航+按钮） -->
-<div class="top-nav">
-    <a href="index.html" class="brand-name">EverydayHolidaY</a>
-    <div class="nav-menu">
-        <a href="category.html">category</a>
-        <a href="occasion.html">occasion</a>
-        <a href="collection.html">collection</a>
-        <a href="gift-packaging.html">gift packaging</a>
-        <a href="decor.html">decor</a>
-        <a href="about.html">about us</a>
-    </div>
-    <div class="auth-btn-group">
-        <a href="signup.html" target="_blank" class="sign-up">Sign up</a>
-        <a href="signin.html" target="_blank" class="sign-in">Sign in</a>
-    </div>
-</div>
-
-<!-- 3. 自定义头图+居中搜索框 -->
-<div class="header">
-    <div class="search-box">
-        <input type="text" class="search-input" placeholder="search...">
-    </div>
-</div>
-
-<!-- ========== 下方文章+侧边栏  ========== -->
-<div class="container">
-    <!-- 文章主区 -->
-    <div class="main">
-        <div class="article">
-            <h2>How did Bacchanalia revive in 2126?</h2>
-            <p class="subtitle">And how do we recover our sincerity as it used to be?</p>
-            <div class="info">Publish Time: 2127-05-16 | Category: News | Views: 766227</div>
-            
-
-  <p class="drop-cap lead">One year ago, on June 9th, millions of people flooded into streets, bars, and public squares to celebrate Bacchanalia for the very first time in modern history. And honestly? Nobody saw it coming — that this ancient festival, pieced together from scattered literary references and dusty historical archives, would take over the world this fast.</p>
-
-  <p>Now, with the second Bacchanalia of 2127 quietly creeping up on us, cities across North America, Europe, and Asia are already getting loud about it. If you haven't started preparing yet, don't panic — you still have time.</p>
-
-  <p>Restaurants are draping grapevines across their doorways and setting out silver goblets. Students are writing holiday cards to their closest friends in class. And on social media, Bacchanalia content is absolutely everywhere. If you don't want to miss the wave, make sure you're using the tags:</p>
-
-  <p class="hashtags">#June9 &nbsp; #Bacchanalia &nbsp; #EverydayHolidaY</p>
-
-  <p>For a lot of people, the holiday already feels so familiar — as though it had never been forgotten.</p>
-
-  <div class="divider">✦ &nbsp; ✦ &nbsp; ✦</div>
-
-  <p>Here's a little story I feel like sharing.</p>
-
-  <p>Around this time last year, I went to invite a friend of mine to celebrate Bacchanalia with me. She's one of the rare few I've met who actually pushed back on the whole thing. She looked at me and said:</p>
-
-  <blockquote>"Why are you so sure today is Bacchanalia? Why should we even celebrate it? It sounds like a purely Greek holiday!"</blockquote>
-
-  <p>I laughed and gave her the most irresponsible, most honest answer I had: <strong>because June is so boring.</strong></p>
-
-  <p>Seriously — what does June have going for it? In winter, you can ride Christmas, Halloween, and New Year's back to back without coming up for air. But June? There's barely a reason to gather, to spend, to feel like anything special is happening. Malls are empty of holiday promotions. No streamers, no decorations, no gift exchanges. Just a long, flat stretch of days that I'm pretty sure every single person on Earth has felt at some point.</p>
-
-  <p>She wasn't convinced, though.</p>
-
-  <p>She still wanted to push back against this trend — this thing we had finally reclaimed in an era of spiritual emptiness.</p>
-
-  <p>And I think, perhaps, that's exactly why Bacchanalia was revived in 2126 in the first place. It was a gift people reclaimed for themselves. If we stop valuing sincerity and a little human warmth, our future is going to get very cold and very rational very fast.</p>
-
-  <p>Her doubts are just one small episode, of course. The origins and history of Bacchanalia have been verified across multiple sources.</p>
-
-  <div class="divider">✦ &nbsp; ✦ &nbsp; ✦</div>
-
-  <p>According to last year's historical research, Bacchanalia was formally established as an annual celebration on June 9th — a date that closely lines up with the period when grapevines enter their flowering and pollination stage. In traditional viticulture, early June has long been considered a critical window that determines whether fruit can successfully form, and it's carried symbolic weight around vitality and emotional release for centuries.</p>
-
-  <p>June 9th also falls near the summer solstice. The days are at their longest. The nights are no longer cold. In that kind of gentle darkness, it's not hard to imagine people in earlier times staying up to celebrate until dawn — which is why many scholars believe this is a key reason why ancient Bacchanalia became so stubbornly tied to nighttime festivities, music, drinking, and collective revelry.</p>
-
-  <p>Over the past year, the idea of "briefly escaping the grind" has spread rapidly among younger generations — especially against a backdrop where brutal work culture and prolonged emotional suppression have gradually become the norm. More and more people have started treating Bacchanalia as the one moment that "actually makes them feel alive."</p>
-
-  <p>That energy has pushed young people to express themselves more openly, and to show up more honestly in front of each other.</p>
-
-  <p>And somewhere along the way, people started to realize: Bacchanalia had become more than a holiday. It had become a new social language.</p>
-
-  <div class="divider">✦ &nbsp; ✦ &nbsp; ✦</div>
-
-  <p>But there's a current worth paying attention to beneath all of this.</p>
-
-  <p>Across enormous amounts of social media content, "whether or not you participate in Bacchanalia" has quietly become a way of measuring whether someone is genuine, open, and willing to be real with their friends. This collective mindset has been nudging young people toward an unspoken conclusion: anyone who won't let loose, even briefly, must not be sincere enough.</p>
-
-  <p>Sentiments like this showed up in festival-related videos and party invitations last June. Some people started assuming, almost as a default, that truly close friends should drink together, stay up all night, talk until sunrise, and do things they'd never ordinarily do — all on Bacchanalia. And that's what none of us would like to see.</p>
-
-  <p>Those who chose not to join were often called "killjoys" or "unnatural."</p>
-
-  <p>In post-festival interviews conducted last year, many young people admitted they hadn't actually wanted to go — but went anyway because they "didn't want to ruin the mood for everyone." One student who attended last year's Bacchanalia night in Los Angeles put it plainly:</p>
-
-  <blockquote>"Everyone was so excited for that day. If you were the only one to say no, it felt like you were single-handedly destroying the whole thing."</blockquote>
-
-  <p>This kind of pressure has gradually been reframed as a form of "freedom."</p>
-
-  <p>We should always remember: Bacchanalia isn't about indulgence — it's about briefly escaping the state of being controlled by your own life.</p>
-
-  <p>Within that framing, choosing not to join the revelry can just as well be a personal choice. Nobody should feel bound or pressured into anything on this day — and that, perhaps, is what Bacchanalia was always truly about.</p>
-
-  <div class="divider">✦ &nbsp; ✦ &nbsp; ✦</div>
-
-  <p>New waves of consumption have risen around this sense of ritual. Limited-edition Bacchanalia badges, grapevine brooches, and custom silver cups all sold out almost entirely around last year's festival.</p>
-
-  <p>Over the past year, a persistent question has followed the holiday: how could a festival only recently rediscovered exert such swift and sweeping influence over an entire society?</p>
-
-  <p>For the many people already counting down to the second Bacchanalia, though, that question seems to matter less and less.</p>
-
-  <p>This week, New York, Tokyo, Paris, and Seoul have all announced their all-night programs for June 9th. Some cities are planning to open "Eve of the Solstice districts" for the first time, allowing businesses to stay open until sunrise.</p>
-
-  <p>On social platforms, the most widely shared phrase heading into this year's Bacchanalia is:</p>
-
-  <p class="closing-quote">"If you're going to fall every once in a while —<br>why not on Bacchanalia?"</p>
-
-  <p class="footnote">Historical analysis, social behavior statistics, and festival participation data cited in this article were provided by the DION Cultural Research AI.</p>
-
+    <div class="top-nav">
+        <a href="index.html" class="brand-name">EverydayHolidaY</a>
+        <div class="nav-menu">
+            <a href="category.html">category</a>
+            <a href="occasion.html">occasion</a>
+            <a href="collection.html">collection</a>
+            <a href="gift-packaging.html">gift packaging</a>
+            <a href="decor.html">decor</a>
+            <a href="about.html">about us</a>
+        </div>
+        <div class="auth-btn-group">
+            <a href="signup.html" target="_blank" class="sign-up">Sign up</a>
+            <a href="signin.html" target="_blank" class="sign-in">Sign in</a>
         </div>
     </div>
 
-    <!-- 侧边栏 AI Chat -->
-    <div class="sidebar">
-        <div class="dion-chat" id="dionChat">
-            <!-- 头部 -->
-            <div class="dion-header">
-                <div class="dion-avatar">✦</div>
-                <div class="dion-header-info">
-                    <div class="dion-name">DION</div>
-                    <div class="dion-status"><span class="status-dot"></span>Cultural Intelligence AI</div>
+    <div class="header">
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="search...">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="main">
+            <div class="article">
+                <h2>How did Bacchanalia revive in 2126?</h2>
+                <p class="subtitle">And how do we recover our sincerity as it used to be?</p>
+                <div class="info">Publish Time: 2127-05-16 | Category: News | Views: 766227</div>
+
+                <p class="drop-cap">One year ago, on June 9, millions of people gathered on streets, bars, and plazas to celebrate Bacchanalia for the very first time in modern history. At that time, people could never have expected that this ancient festival, recovered from fragmented literary references and historical archives, would take over the world this fast.</p>
+
+                <p>Now, as we're here, approaching the second Bacchanalia in 2127, cities across North America, Europe, and Asia are all once again loudly preparing for this grand celebration, and it's still not too late for you to start preparing and join the celebration!</p>
+
+                <p>Restaurants have already begun installing grapevine decorations and silver goblets. At school, students write greeting cards to their closest friends, while social platforms have seen a sharp increase in Bacchanalia-related content. If you don't want to miss the latest trends, remember to include these tags.</p>
+
+                <p class="hashtags">#June9 &nbsp; #Bacchanalia &nbsp; #EverydayHolidaY</p>
+
+                <p>For a lot of people, the holiday already feels so familiar—as though it had never been forgotten.</p>
+
+                <div class="divider">✦ &nbsp; ✦ &nbsp; ✦</div>
+
+                <p>And here's a little story I'm willing to share with you:</p>
+
+                <p>Around this time last year, I went to invite a friend to celebrate Bacchanalia. She's one of the rare few I've met who actually pushed back on the whole thing. She asked me:</p>
+
+                <blockquote>"Why are you so sure today is Bacchanalia? Why should we even celebrate it? It sounds like a purely Greek holiday!"</blockquote>
+
+                <p>I laughed and gave her the most irresponsible, most honest answer I had:</p>
+
+                <p>Because June is so boring.</p>
+
+                <p>June is dull. Seriously—what does June have going for it?</p>
+
+                <p>In winter, you can celebrate Christmas, Halloween, and New Year's back to back—but come June, there's barely a reason or an opportunity to spend, to gather, to feel like anything special is happening. Shopping malls are empty, almost entirely free of holiday promotions. No streamers, no decorations, no gift exchanges. I'm pretty sure every single person can relate to that flat, unremarkable stretch of days.</p>
+
+                <p>But she wasn't convinced, though.</p>
+
+                <p>She still wanted to push back against this trend—this thing we had finally reclaimed in an era of spiritual emptiness.</p>
+
+                <p>And I think, perhaps, that's exactly why Bacchanalia was revived in 2126: it was a gift people reclaimed for themselves. If we stop valuing sincerity and humanity, our era—our future—will become irreversibly grim and relentlessly rational.</p>
+
+                <p>Despite her doubts, it's only an episode. The origins and history of Bacchanalia have been verified from multiple sources.</p>
+
+                <div class="divider">✦ &nbsp; ✦ &nbsp; ✦</div>
+
+                <p>According to last year's historical research, Bacchanalia was formally founded as an annual celebration on June 9th. This date closely coincides with the period when grapevines enter their flowering and pollination stage. In traditional viticulture, early June is regarded as a critical window that determines whether fruit can successfully form, and has long been imbued with symbolic meaning around vitality and emotional release.</p>
+
+                <p>June 9th also falls near the summer solstice. The days grow longer, and the nights are no longer pierced by cold winds. In this gentle night, people of earlier times must surely have gathered to celebrate through the dark hours, which is why many scholars believe this is a key reason why ancient Bacchanalia became so durably associated with nocturnal celebration, music, drinking, and collective revelry.</p>
+
+                <p>Over the past year, this idea of "briefly escaping the routines of daily life" has spread rapidly among younger generations—especially against a backdrop where high-pressure work culture and prolonged emotional suppression have gradually become social norms. More and more people have come to treat Bacchanalia as a moment that "permits them to truly feel alive."</p>
+
+                <p>That energy has pushed young people to express themselves more openly, and to show up more honestly in front of each other.</p>
+
+                <p>And somewhere along the way, people started to realize: Bacchanalia had become more than a holiday. It had become a new social language.</p>
+
+                <div class="divider">✦ &nbsp; ✦ &nbsp; ✦</div>
+
+                <p>Yet we should be alert to a risk: the excessive pursuit of "sincerity" can backfire.</p>
+
+                <p>Across enormous amounts of social media content, "whether or not you participate in Bacchanalia" has quietly become a way of measuring whether someone is genuine, open, and willing to be real with their friends. This collective mindset has been pushing young people toward an unspoken conclusion: anyone who won't let loose, even briefly, must not be sincere enough.</p>
+
+                <p>Sentiments like this appeared in a small number of festival-related videos and party invitations last June. Some people began to assume, as a default, that truly close friends should drink together, stay up all night, talk until dawn, and even do wild things they would never ordinarily do—all on Bacchanalia. And that's what none of us would like to see.</p>
+
+                <p>Those who chose not to participate were often labeled as "killjoys" or "unnatural."</p>
+
+                <p>In several post-festival interviews conducted last year, many young people admitted they hadn't actually wanted to go—but went anyway because they "didn't want to ruin the mood for everyone." One student who attended last year's Bacchanalia night in Los Angeles put it plainly:</p>
+
+                <blockquote>"Everyone was so excited for that day. If you were the only one to say no, it felt like you were single-handedly destroying the whole thing."</blockquote>
+
+                <p>This kind of pressure has gradually been reframed as a form of "freedom."</p>
+
+                <p>We should always remember Bacchanalia isn't about indulgence—it's about briefly escaping the state of being controlled by life.</p>
+
+                <p>Within that framing, choosing not to join the revelry can just as well be a personal choice. Nobody should feel bound or pressured into anything on this day—and that, perhaps, is what Bacchanalia was always truly about.</p>
+
+                <div class="divider">✦ &nbsp; ✦ &nbsp; ✦</div>
+
+                <p>Around this sense of exclusive ritual, new patterns of consumption have also emerged rapidly. Limited-edition Bacchanalia badges, grapevine brooches, and custom silver cups all sold out almost entirely around last year's festival.</p>
+
+                <p>Over the past year, there have been persistent questions: how could a festival only recently rediscovered exert such swift and sweeping influence over an entire society?</p>
+
+                <p>For the many people who have already begun anticipating the second Bacchanalia, however, that question seems to matter less and less.</p>
+
+                <p>This week, cities including New York, Tokyo, Paris, and Seoul have successively announced their all-night celebration programs for June 9th. Some cities are expected to open "Eve of the Solstice districts" for the first time, allowing businesses to remain open until sunrise.</p>
+
+                <p>On social platforms, the most widely shared phrase for this year's Bacchanalia is:</p>
+
+                <p class="closing-quote">"If you fall every once in a while, why not Bacchanalia?"</p>
+
+                <p class="footnote">Historical analysis, social behavior statistics, and festival participation data cited in this article were provided by the DION Cultural Research AI.</p>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="dion-chat" id="dionChat">
+                <div class="dion-header">
+                    <div class="dion-avatar">✦</div>
+                    <div class="dion-header-info">
+                        <div class="dion-name">DION</div>
+                        <div class="dion-status"><span class="status-dot"></span>Cultural Intelligence AI</div>
+                    </div>
+                </div>
+                <div class="dion-messages" id="dionMessages"></div>
+                <div class="dion-suggestions" id="dionSuggestions">
+                    <span class="suggestion-chip" onclick="sendChip(this)">What is Bacchanalia?</span>
+                    <span class="suggestion-chip" onclick="sendChip(this)">Why do we celebrate?</span>
+                    <span class="suggestion-chip" onclick="sendChip(this)">Best gifts for June?</span>
+                </div>
+                <div class="dion-input-area">
+                    <textarea class="dion-input" id="dionInput" rows="1" placeholder="Ask DION anything…"></textarea>
+                    <button class="dion-send" onclick="sendMessage()">
+                        <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                    </button>
                 </div>
             </div>
-
-            <!-- 消息区 -->
-            <div class="dion-messages" id="dionMessages">
-            </div>
-
-            <!-- 快捷提问 -->
-            <div class="dion-suggestions" id="dionSuggestions">
-                <span class="suggestion-chip" onclick="sendChip(this)">What is Bacchanalia?</span>
-                <span class="suggestion-chip" onclick="sendChip(this)">Why do we celebrate?</span>
-                <span class="suggestion-chip" onclick="sendChip(this)">Best gifts for June?</span>
-            </div>
-
-            <!-- 输入区 -->
-            <div class="dion-input-area">
-                <textarea class="dion-input" id="dionInput" rows="1" placeholder="Ask DION anything…"></textarea>
-                <button class="dion-send" id="dionSend" onclick="sendMessage()">
-                    <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-                </button>
-            </div>
         </div>
     </div>
-</div>
 
-<div class="footer">
-    <p>EverydayHolidaY</p>
-</div>
+    <div class="footer">
+        <p>EverydayHolidaY</p>
+    </div>
 
 <script>
 function getTime(){
     const d=new Date();
-    return d.getHours().toString().padStart(2,'0')+':'+d.getMinutes().toString().padStart(2,'0');
+    return d.getHours().toString().padStart(2,’0’)+’:’+d.getMinutes().toString().padStart(2,’0’);
 }
-
 function appendMsg(text){
-    const wrap = document.getElementById('dionMessages');
-    const div = document.createElement('div');
-    div.className = 'msg user';
-    const avatar = document.createElement('div');
-    avatar.className = 'msg-avatar';
-    avatar.textContent = '✿';
-    const inner = document.createElement('div');
-    const bubble = document.createElement('div');
-    bubble.className = 'msg-bubble';
-    bubble.textContent = text;
-    const time = document.createElement('div');
-    time.className = 'msg-time';
-    time.textContent = getTime();
+    const wrap=document.getElementById(‘dionMessages’);
+    const div=document.createElement(‘div’);
+    div.className=’msg user’;
+    const avatar=document.createElement(‘div’);
+    avatar.className=’msg-avatar’;
+    avatar.textContent=’✿’;
+    const inner=document.createElement(‘div’);
+    const bubble=document.createElement(‘div’);
+    bubble.className=’msg-bubble’;
+    bubble.textContent=text;
+    const time=document.createElement(‘div’);
+    time.className=’msg-time’;
+    time.textContent=getTime();
     inner.appendChild(bubble);
     inner.appendChild(time);
     div.appendChild(avatar);
     div.appendChild(inner);
     wrap.appendChild(div);
-    wrap.scrollTop = wrap.scrollHeight;
+    wrap.scrollTop=wrap.scrollHeight;
 }
-
 function sendMessage(){
-    const input = document.getElementById('dionInput');
-    const text = input.value.trim();
-    if(!text) return;
+    const input=document.getElementById(‘dionInput’);
+    const text=input.value.trim();
+    if(!text)return;
     appendMsg(text);
-    input.value = '';
-    input.style.height = 'auto';
-    document.getElementById('dionSuggestions').style.display = 'none';
+    input.value=’’;
+    input.style.height=’auto’;
+    document.getElementById(‘dionSuggestions’).style.display=’none’;
 }
-
 function sendChip(el){
-    document.getElementById('dionInput').value = el.textContent;
+    document.getElementById(‘dionInput’).value=el.textContent;
     sendMessage();
 }
-
-// Auto-resize textarea
-document.getElementById('dionInput').addEventListener('input', function(){
-    this.style.height = 'auto';
-    this.style.height = Math.min(this.scrollHeight, 90) + 'px';
+document.getElementById(‘dionInput’).addEventListener(‘input’,function(){
+    this.style.height=’auto’;
+    this.style.height=Math.min(this.scrollHeight,90)+’px’;
 });
-
-// Enter to send (Shift+Enter for newline)
-document.getElementById('dionInput').addEventListener('keydown', function(e){
-    if(e.key==='Enter' && !e.shiftKey){e.preventDefault();sendMessage();}
+document.getElementById(‘dionInput’).addEventListener(‘keydown’,function(e){
+    if(e.key===’Enter’&&!e.shiftKey){e.preventDefault();sendMessage();}
 });
 </script>
 </body>
