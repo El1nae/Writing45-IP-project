@@ -1,6 +1,6 @@
 # Writing45-IP-project
 
-# This repositories is for Writing45 imaginary project website development.
+This repositories is for Writing45 imaginary project website development.
 
 # Craft essay
 
