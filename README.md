@@ -10,25 +10,18 @@ This is a static website deployed on the internet, can be accessied by anyone vi
 
 - **Publicly accessible** — Anyone on any device can browse it by opening the link, with no file download.
 - **Automated deployment** — After pushing code to GitHub, Netlify automatically builds and publishes the latest version — no manual uploads.
-- **移动端友好 / Mobile-friendly** — Built on HTTPS, supporting "Add to Home Screen," custom icons, and other mobile features.
 
-## 运行逻辑 / How It Works
+# How It Works
 
-1. **GitHub 仓库**存放全部源码(HTML、PNG 图片等),并记录每一次修改。 / The **GitHub repository** stores all source code (HTML, PNG images, etc.) and records every change.
-2. 仓库与 **Netlify 关联**:一旦有新代码推送到 GitHub,Netlify 自动拉取并部署。 / The repo is **linked to Netlify**: whenever new code is pushed to GitHub, Netlify pulls and deploys it automatically.
-3. 访客打开 Netlify 提供的网址,服务器通过 HTTPS 将页面返回浏览器渲染。 / A visitor opens the Netlify URL, and the server returns the page over HTTPS for the browser to render.
+1. The **GitHub repository** stores all source code (HTML, PNG images, etc.) and records every change.
+2. The repo is **linked to Netlify**: whenever new code is pushed to GitHub, Netlify pulls and deploys it automatically.
+3. A visitor opens the Netlify URL, and the server returns the page over HTTPS for the browser to render.
 
-## 给使用者的说明 / Notes for Users
+# Tech Stack
 
-- **打开即用 / Open and go** — 直接访问网址即可,内容对所有访客一致,无需任何本地文件或安装。 / Just visit the URL; the content is the same for all visitors, with no local files or installation.
-- **内容随代码更新 / Content updates with code** — 页面展示的内容写在代码中;要修改内容,更新 GitHub 上的代码,网站会自动同步为最新版本。 / Page content lives in the code; to change it, update the code on GitHub and the site syncs to the latest version automatically.
-- **与本地应用的区别 / Difference from a local app** — 本项目内容存放在服务器、通过网址访问,人人看到同一份;区别于需下载文件、数据各存各机的本地应用。 / This project's content lives on a server and is accessed via a URL, so everyone sees the same copy — unlike a local app where files are downloaded and data stays on each machine.
-
-## 技术栈 / Tech Stack
-
-- 静态页面 / Static pages: HTML / CSS / 图片资源(PNG) / image assets (PNG)
-- 代码托管 / Code hosting: GitHub
-- 部署托管 / Deployment: Netlify(持续部署 CI/CD / continuous deployment)
+- Static pages: HTML / CSS / image assets (PNG)
+- Code hosting: GitHub
+- Deployment: Netlify(continuous deployment)
 
 
 # Craft essay
