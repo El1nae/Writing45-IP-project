@@ -4,23 +4,13 @@ This repositories is created for Writing45 imaginary project website development
 
 # Description
 
-## 项目二:Netlify 网站 · README
+This is a static website deployed on the internet, can be accessied by anyone via a public URL. The code is hosted on GitHub and deployed automatically by Netlify, every code will update refreshes the site.
 
-> 把 `项目名` / 网站用途 / 网址替换成你的实际信息。 / Replace `Project Name` / purpose / URL with your actual details.
+# Features
 
-```markdown
-# 项目名 · 在线网站 / Project Name · Live Website
-
-一个部署在互联网上的静态网站,任何人通过公开网址即可访问。代码托管于 GitHub,由 Netlify 自动部署上线——每次更新代码,网站自动刷新。
-
-A static website deployed on the internet, accessible to anyone via a public URL. The code is hosted on GitHub and deployed automatically by Netlify — every code update refreshes the site.
-
-## 特点 / Features
-
-- **公开可访问 / Publicly accessible** — 拥有一个 `https://` 网址,任何人、任何设备打开链接即可浏览,无需下载文件。 / Has an `https://` URL; anyone on any device can browse it by opening the link, with no file download.
-- **自动化部署 / Automated deployment** — 代码推送到 GitHub 后,Netlify 自动构建并发布最新版本,无需手动上传。 / After pushing code to GitHub, Netlify automatically builds and publishes the latest version — no manual uploads.
-- **版本可追溯 / Version history** — 所有改动记录在 GitHub,随时可查看历史、回退版本。 / All changes are recorded on GitHub; history and rollbacks are available anytime.
-- **移动端友好 / Mobile-friendly** — 基于 HTTPS,支持"添加到主屏幕"、自定义图标等移动端能力。 / Built on HTTPS, supporting "Add to Home Screen," custom icons, and other mobile features.
+- **Publicly accessible** — Anyone on any device can browse it by opening the link, with no file download.
+- **Automated deployment** — After pushing code to GitHub, Netlify automatically builds and publishes the latest version — no manual uploads.
+- **移动端友好 / Mobile-friendly** — Built on HTTPS, supporting "Add to Home Screen," custom icons, and other mobile features.
 
 ## 运行逻辑 / How It Works
 
