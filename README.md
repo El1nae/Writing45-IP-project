@@ -1,6 +1,45 @@
 # Writing45-IP-project
 
-This repositories is for Writing45 imaginary project website development.
+This repositories is created for Writing45 imaginary project website development.
+
+# Description
+
+## 项目二:Netlify 网站 · README
+
+> 把 `项目名` / 网站用途 / 网址替换成你的实际信息。 / Replace `Project Name` / purpose / URL with your actual details.
+
+```markdown
+# 项目名 · 在线网站 / Project Name · Live Website
+
+一个部署在互联网上的静态网站,任何人通过公开网址即可访问。代码托管于 GitHub,由 Netlify 自动部署上线——每次更新代码,网站自动刷新。
+
+A static website deployed on the internet, accessible to anyone via a public URL. The code is hosted on GitHub and deployed automatically by Netlify — every code update refreshes the site.
+
+## 特点 / Features
+
+- **公开可访问 / Publicly accessible** — 拥有一个 `https://` 网址,任何人、任何设备打开链接即可浏览,无需下载文件。 / Has an `https://` URL; anyone on any device can browse it by opening the link, with no file download.
+- **自动化部署 / Automated deployment** — 代码推送到 GitHub 后,Netlify 自动构建并发布最新版本,无需手动上传。 / After pushing code to GitHub, Netlify automatically builds and publishes the latest version — no manual uploads.
+- **版本可追溯 / Version history** — 所有改动记录在 GitHub,随时可查看历史、回退版本。 / All changes are recorded on GitHub; history and rollbacks are available anytime.
+- **移动端友好 / Mobile-friendly** — 基于 HTTPS,支持"添加到主屏幕"、自定义图标等移动端能力。 / Built on HTTPS, supporting "Add to Home Screen," custom icons, and other mobile features.
+
+## 运行逻辑 / How It Works
+
+1. **GitHub 仓库**存放全部源码(HTML、PNG 图片等),并记录每一次修改。 / The **GitHub repository** stores all source code (HTML, PNG images, etc.) and records every change.
+2. 仓库与 **Netlify 关联**:一旦有新代码推送到 GitHub,Netlify 自动拉取并部署。 / The repo is **linked to Netlify**: whenever new code is pushed to GitHub, Netlify pulls and deploys it automatically.
+3. 访客打开 Netlify 提供的网址,服务器通过 HTTPS 将页面返回浏览器渲染。 / A visitor opens the Netlify URL, and the server returns the page over HTTPS for the browser to render.
+
+## 给使用者的说明 / Notes for Users
+
+- **打开即用 / Open and go** — 直接访问网址即可,内容对所有访客一致,无需任何本地文件或安装。 / Just visit the URL; the content is the same for all visitors, with no local files or installation.
+- **内容随代码更新 / Content updates with code** — 页面展示的内容写在代码中;要修改内容,更新 GitHub 上的代码,网站会自动同步为最新版本。 / Page content lives in the code; to change it, update the code on GitHub and the site syncs to the latest version automatically.
+- **与本地应用的区别 / Difference from a local app** — 本项目内容存放在服务器、通过网址访问,人人看到同一份;区别于需下载文件、数据各存各机的本地应用。 / This project's content lives on a server and is accessed via a URL, so everyone sees the same copy — unlike a local app where files are downloaded and data stays on each machine.
+
+## 技术栈 / Tech Stack
+
+- 静态页面 / Static pages: HTML / CSS / 图片资源(PNG) / image assets (PNG)
+- 代码托管 / Code hosting: GitHub
+- 部署托管 / Deployment: Netlify(持续部署 CI/CD / continuous deployment)
+
 
 # Craft essay
 
